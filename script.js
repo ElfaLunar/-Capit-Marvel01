@@ -1,15 +1,13 @@
-const container = document.getElementById('hover-container');
-const imageWrapper = document.querySelector('.image-wrapper');
-const infoText = document.getElementById('info-text');
+const card = document.getElementById('hover-container');
+const imgWrapper = document.querySelector('.image-wrapper');
+const text = document.getElementById('info-text');
 
-container.addEventListener('mouseenter', () => {
-  imageWrapper.style.left = '75%';
-  infoText.style.opacity = '1';
-  infoText.style.transform = 'translateX(0)';
+card.addEventListener('mouseenter', () => {
+  imgWrapper.style.left = '70%';
+  text.style.opacity = '1';
 });
 
-container.addEventListener('mouseleave', () => {
-  imageWrapper.style.left = '50%';
-  infoText.style.opacity = '0';
-  infoText.style.transform = 'translateX(-20px)';
+card.addEventListener('mouseleave', () => {
+  imgWrapper.style.left = '50%';
+  text.style.opacity = '0';
 });
