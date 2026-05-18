@@ -4,54 +4,70 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, #d41e31, #491f8f);
+  background: white;
   font-family: Arial, sans-serif;
   overflow: hidden;
 }
 
-.container {
+.card {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 80%;
-  max-width: 1200px;
+  width: 700px;
+  height: 400px;
+  background: linear-gradient(45deg, #d41e31, #491f8f);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: visible;
   cursor: pointer;
-  gap: 2rem;
+}
+
+.image-wrapper {
+  position: absolute;
+  left: 35%;
+  transform: translateX(-50%);
+  transition: left 0.5s ease;
+  z-index: 10;
 }
 
 .hero-image {
-  width: 350px;
+  width: 400px;
   height: auto;
-  transition: transform 0.5s ease;
-  border-radius: 10px;
-  z-index: 2;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  display: block;
 }
 
 .info-text {
-  max-width: 40%;
+  position: absolute;
+  left: 30px;
+  max-width: 35%;
   color: #fff;
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   transform: translateX(-20px);
+  z-index: 5;
 }
 
 .info-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
   color: #ffd700;
 }
 
-/* Efeito hover no container */
-.container:hover .hero-image {
-  transform: translateX(100px);
+.info-text p {
+  font-size: 0.9rem;
 }
 
-.container:hover .info-text {
+/* Efeito hover: imagem vai para a direita */
+.card:hover .image-wrapper {
+  left: 65%;
+}
+
+.card:hover .info-text {
   opacity: 1;
   transform: translateX(0);
 }
