@@ -1,16 +1,15 @@
 const container = document.getElementById('hover-container');
-const heroImage = document.getElementById('hero-image');
+const imageWrapper = document.querySelector('.image-wrapper');
 const infoText = document.getElementById('info-text');
 
-// Também funciona com JavaScript além do CSS
 container.addEventListener('mouseenter', () => {
-  heroImage.style.transform = 'translateX(120px)';
+  imageWrapper.style.left = '65%';
   infoText.style.opacity = '1';
   infoText.style.transform = 'translateX(0)';
 });
 
 container.addEventListener('mouseleave', () => {
-  heroImage.style.transform = 'translateX(0)';
+  imageWrapper.style.left = '35%';
   infoText.style.opacity = '0';
   infoText.style.transform = 'translateX(-20px)';
 });
