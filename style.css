@@ -10,37 +10,39 @@ body {
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  width: 700px;
-  height: 400px;
+  width: 800px;
+  height: 450px;
   background: linear-gradient(45deg, #d41e31, #491f8f);
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   overflow: visible;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .image-wrapper {
   position: absolute;
-  left: 35%;
+  left: 50%;
   transform: translateX(-50%);
-  transition: left 0.5s ease;
+  bottom: 0;
+  transition: all 0.5s ease;
   z-index: 10;
 }
 
 .hero-image {
-  width: 400px;
+  width: 380px;
   height: auto;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
   display: block;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  /* A imagem ultrapassa o topo do card */
+  margin-bottom: -50px;
 }
 
 .info-text {
   position: absolute;
-  left: 30px;
+  left: 40px;
   max-width: 35%;
   color: #fff;
   opacity: 0;
@@ -60,11 +62,13 @@ body {
 
 .info-text p {
   font-size: 0.9rem;
+  margin: 0;
 }
 
 /* Efeito hover: imagem vai para a direita */
 .card:hover .image-wrapper {
-  left: 65%;
+  left: 75%;
+  transform: translateX(-50%);
 }
 
 .card:hover .info-text {
