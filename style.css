@@ -19,7 +19,7 @@ body {
   height: 450px;
   background: linear-gradient(45deg, #d41e31, #491f8f);
   border-radius: 20px;
-  overflow: hidden; /* Muda para hidden para cortar o que sai do retângulo */
+  overflow: visible; /* Permite a cabeça sair para fora */
   cursor: pointer;
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
@@ -27,7 +27,7 @@ body {
 .image-wrapper {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  top: 0; /* Muda de bottom para top */
   transform: translateX(-50%);
   transition: left 0.5s ease;
   z-index: 2;
@@ -37,7 +37,7 @@ body {
   width: 400px;
   height: auto;
   display: block;
-  margin-bottom: -20px; /* Ajusta quanto do corpo aparece */
+  margin-top: -60px; /* Faz a cabeça subir para fora do retângulo */
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
 }
 
