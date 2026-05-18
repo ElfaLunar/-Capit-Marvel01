@@ -19,7 +19,7 @@ body {
   height: 450px;
   background: linear-gradient(45deg, #d41e31, #491f8f);
   border-radius: 20px;
-  overflow: visible;
+  overflow: hidden; /* Muda para hidden para cortar o que sai do retângulo */
   cursor: pointer;
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
@@ -37,7 +37,7 @@ body {
   width: 400px;
   height: auto;
   display: block;
-  margin-bottom: -60px;
+  margin-bottom: -20px; /* Ajusta quanto do corpo aparece */
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
 }
 
@@ -50,7 +50,7 @@ body {
   color: white;
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 1;
+  z-index: 3;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
