@@ -12,28 +12,46 @@ body {
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   width: 80%;
-  max-width: 1000px;
+  max-width: 1200px;
   cursor: pointer;
+  gap: 2rem;
 }
 
 .hero-image {
-  width: 300px;
+  width: 350px;
+  height: auto;
   transition: transform 0.5s ease;
   border-radius: 10px;
   z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .info-text {
-  position: absolute;
-  left: 0;
   max-width: 40%;
   color: #fff;
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
   font-size: 1.1rem;
   line-height: 1.5;
-  padding-right: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   transform: translateX(-20px);
+}
+
+.info-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+/* Efeito hover no container */
+.container:hover .hero-image {
+  transform: translateX(100px);
+}
+
+.container:hover .info-text {
+  opacity: 1;
+  transform: translateX(0);
 }
